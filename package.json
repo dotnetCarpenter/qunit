@@ -2,33 +2,41 @@
   "name": "qunitjs",
   "title": "QUnit",
   "description": "An easy-to-use JavaScript Unit Testing framework.",
-  "version": "1.10.0pre",
-  "author": "The jQuery Project",
-  "contributors": [
-    "John Resig <jeresig@gmail.com> (http://ejohn.org/)",
-    "Jörn Zaefferer <joern.zaefferer@googlemail.com> (http://bassistance.de/)"
-  ],
+  "version": "1.13.0pre",
   "homepage": "http://qunitjs.com",
+  "author": {
+    "name": "jQuery Foundation and other contributors",
+    "url": "https://github.com/jquery/qunit/blob/master/AUTHORS.txt"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/jquery/qunit.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jquery/qunit/issues"
-  },
-  "license": {
-    "name": "MIT",
-    "url": "http://www.opensource.org/licenses/mit-license.php"
   },
   "keywords": [
     "testing",
     "unit",
     "jquery"
   ],
-  "main": "qunit/qunit.js",
+  "bugs": {
+    "url": "https://github.com/jquery/qunit/issues"
+  },
+  "license": {
+    "name": "MIT",
+    "url": "https://github.com/jquery/qunit/blob/master/MIT-LICENSE.txt"
+  },
+  "dependencies": {},
   "devDependencies": {
-    "grunt": "0.3.x",
-    "grunt-git-authors": "1.0.0",
-    "testswarm": "0.2.2"
-  }
+    "grunt": "~0.4.0",
+    "grunt-contrib-concat": "0.3.0",
+    "grunt-contrib-jshint": "~0.2.0",
+    "grunt-contrib-qunit": "~0.2.0",
+    "grunt-contrib-watch": "~0.3.0",
+    "grunt-git-authors": "~1.2.0",
+    "testswarm": "~1.0.1"
+  },
+  "scripts": {
+    "test": "grunt",
+    "prepublish": "grunt build"
+  },
+  "main": "dist/qunit.js"
 }
